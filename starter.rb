@@ -32,7 +32,11 @@ class Starter
 
   def execute
     @configs.each do |config_name|
-      system("conky -c ./#{config_name}.conf")
+      offset = 3865
+      if config_name == "calendar"
+        offset = 4005
+      end
+      system("conky -c ./#{config_name}.conf -x #{offset}")
     end
   end
 
