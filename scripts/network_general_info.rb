@@ -1,7 +1,7 @@
 require 'yaml'
 #secrets = YAML.load_file(ENV['HOME']+'/.conky/secrets.yml')
 #interface = secrets['network_interface']
-interface = 'wlp3s0'
+interface = 'wlp12s0'
 nameservers = `cat /etc/resolv.conf | grep ^nameserver | awk '{print $2}'`.split("\n").join(',')
 
 output = ''
